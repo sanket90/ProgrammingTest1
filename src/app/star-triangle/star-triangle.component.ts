@@ -9,17 +9,18 @@ export class StarTriangleComponent implements OnInit, OnChanges {
 
   @Input() n : any;
   star : any;
+  private char = "*"
 
-  ngOnInit() { this.star = this.generateStarTriangle(this.n) }
+  ngOnInit() { this.star = this.generateStarTriangle(this.n, this.char) }
 
-  ngOnChanges() { this.star = this.generateStarTriangle(this.n) }
+  ngOnChanges() { this.star = this.generateStarTriangle(this.n, this.char) }
   
-  private generateStarTriangle(num) {
+  private generateStarTriangle(num, char) {
     let rows = []
     for (let i=0; i<num; i++) {
       let columns = []
       for (let j=0; j<=i; j++) {
-        columns[j] = "* "
+        columns[j] = char
       }
       rows[i] = columns
     }
