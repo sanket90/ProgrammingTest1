@@ -16,7 +16,7 @@ export class FibonacciComponent implements OnInit, OnChanges {
   private generateFibonacciSeries(num) {
     let series = [];
     for (let i=0; i<num; i++) {
-      if (i < 2) series[i]=1
+      if (i < 2) series[i]=i
       else series[i]= series[i-1] + series[i-2]
     }
     return series
