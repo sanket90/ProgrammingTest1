@@ -1,3 +1,6 @@
-<span *ngFor="let item of fib">{{ item }} </span>
-<br/>
-<br/>
+<div *ngIf="n">
+    <h3>Fibonacci Series of length {{ n }}</h3>
+    <span *ngFor="let item of fib">{{ item }} </span>
+    <br/>
+    <br/>
+</div>

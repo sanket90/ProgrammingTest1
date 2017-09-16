@@ -9,7 +9,7 @@ export class StarTriangleComponent implements OnInit, OnChanges {
 
   @Input() n : any;
   star : any;
-  private char = "*"
+  char = "*"
 
   ngOnInit() { this.star = this.generateStarTriangle(this.n, this.char) }
 
