@@ -1,18 +1,17 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fibonacci',
   templateUrl: './fibonacci.component.html',
   styleUrls: ['./fibonacci.component.css']
 })
-export class FibonacciComponent implements OnChanges {
-
-  constructor() { }
-
+export class FibonacciComponent implements OnInit, OnChanges {
   @Input() n : number;
   fib : any
 
-  ngOnChanges() { this.fib = this.calcFibonacciSeries(this.n)}
+  ngOnInit() { this.fib = this.calcFibonacciSeries(this.n) }
+  
+  ngOnChanges() { this.fib = this.calcFibonacciSeries(this.n) }
 
   private calcFibonacciSeries(num) {
     let series = [];
