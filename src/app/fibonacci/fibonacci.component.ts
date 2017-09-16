@@ -9,11 +9,11 @@ export class FibonacciComponent implements OnInit, OnChanges {
   @Input() n : number;
   fib : any
 
-  ngOnInit() { this.fib = this.calcFibonacciSeries(this.n) }
+  ngOnInit() { this.fib = this.generateFibonacciSeries(this.n) }
   
-  ngOnChanges() { this.fib = this.calcFibonacciSeries(this.n) }
+  ngOnChanges() { this.fib = this.generateFibonacciSeries(this.n) }
 
-  private calcFibonacciSeries(num) {
+  private generateFibonacciSeries(num) {
     let series = [];
     for (let i=0; i<num; i++) {
       if (i < 2) series[i]=1

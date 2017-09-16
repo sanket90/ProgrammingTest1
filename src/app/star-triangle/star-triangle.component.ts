@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-star-triangle',
@@ -7,9 +7,11 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class StarTriangleComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  @Input() n : any;
 
   ngOnInit() { }
 
   ngOnChanges() {}
+
+  private 
 }
